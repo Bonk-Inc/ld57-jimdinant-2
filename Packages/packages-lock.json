@@ -364,14 +364,14 @@
       "url": "https://packages.unity.com"
     },
     "group.bonk.standard-library": {
-      "version": "git@github.com:Bonk-Inc/group.bonk.bonk-standard-library.git#v1.0.0",
+      "version": "git@github.com:Bonk-Inc/group.bonk.standard-library.git#v1.0.2",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.unity.cinemachine": "3.1.3",
         "com.unity.textmeshpro": "4.0.0-pre12"
       },
-      "hash": "48d507a17885e66b735bfb927f8a71a0604f01dc"
+      "hash": "32d76db417eb8c016f8501f2dce32fb26e53ad51"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
