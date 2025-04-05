@@ -33,7 +33,7 @@ public class WormMovement : MonoBehaviour
         wormRigidBody = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         wormRigidBody.linearVelocity = -transform.up * wormSpeed * speedMult;
 
