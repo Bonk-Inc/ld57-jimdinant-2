@@ -1,3 +1,4 @@
+using Bonk.StandardLibrary.Numerics;
 using UnityEngine;
 
 public class OrthographicCameraSizeCalculatorHelper
@@ -30,5 +31,7 @@ public class OrthographicCameraSizeCalculatorHelper
         return aspect != camera.aspect || size != camera.orthographicSize;
     }
 
+    public Vector2 GetViewportCenter() =>
+        camera.transform.position.ToVector2();
 
 }

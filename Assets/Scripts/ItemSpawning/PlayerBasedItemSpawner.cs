@@ -42,6 +42,7 @@ public class PlayerBasedItemSpawner : MonoBehaviour
         var itemToSpawn = GetRandomSpawnItem();
         var spawnPosition = GetSpawnLocation();
         var item = Instantiate(itemToSpawn);
+        item.SetPlayer(player);
         item.transform.position = spawnPosition;
     }
 
@@ -55,7 +56,9 @@ public class PlayerBasedItemSpawner : MonoBehaviour
         var angle = Random.value * spawnAngle + angleOffset;
         var forward = player.transform.up.ToVector2();
         var spawnDirection = forward.Rotate(angle);
-        return spawnDirection.normalized.ToVector3(0) * distance;
+        var center = cameraSizeCalculator.GetViewportCenter();
+        var spawnPosition = center + spawnDirection.normalized * distance;
+        return spawnPosition.ToVector3(0);
     }
 
     private float GetSpawnDistance() => 
