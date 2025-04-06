@@ -8,7 +8,7 @@ static class ListExtention {
         // TODO better implementation?
         var weights = list.Select(getWeight).ToArray();
         var maxWeight = weights.Sum();
-        var chosenWeight = UnityEngine.Random.Range(0, maxWeight);
+        var chosenWeight = UnityEngine.Random.Range(0, maxWeight+1);
         var currentWeight = 0;
         for (int i = 0; i < list.Count; i++)
         {

@@ -19,6 +19,6 @@ public static class CameraExtentions
     public static float CalulateDistanceToCorner(this Camera camera) {
         var verticalSize = camera.CalulateVerticalSize();
         var horizontalSize = camera.CalulateHorizontalSize();
-        return Mathf.Sqrt(verticalSize * verticalSize + horizontalSize + horizontalSize);
+        return Mathf.Sqrt(verticalSize * verticalSize + horizontalSize * horizontalSize);
     }
 }

@@ -174,6 +174,9 @@ GameObject:
   - component: {fileID: 8363457578987315899}
   - component: {fileID: 8363457578987315896}
   - component: {fileID: 1704313775}
+  - component: {fileID: 4969357382445737236}
+  - component: {fileID: 8513349789507189217}
+  - component: {fileID: 675940141942036159}
   m_Layer: 0
   m_Name: WormPart - Head
   m_TagString: Player
@@ -287,6 +290,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &4969357382445737236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363457578987315897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e0970ed14097904aecc58a17610609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSystem: {fileID: 4284186053836123548}
+  healthSystem: {fileID: 675940141942036159}
+--- !u!114 &8513349789507189217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363457578987315897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca387db60eb8b4439527528785e22e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerRate: 1
+  safetyTime: 5
+--- !u!114 &675940141942036159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363457578987315897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ecb8e49f7d71100a7604acf6e8fa58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincible: 0
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDealth:
+    m_PersistentCalls:
+      m_Calls: []
+  InvincibilityChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8363457579462339249
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +351,8 @@ GameObject:
   - component: {fileID: 8363457579462339251}
   - component: {fileID: 8363457579462339248}
   - component: {fileID: 3850054037238967928}
+  - component: {fileID: 1622433009183377862}
+  - component: {fileID: 4284186053836123548}
   m_Layer: 0
   m_Name: WormBody
   m_TagString: Untagged
@@ -353,6 +408,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b436e094b9a3e4e9ed63d658ead667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1622433009183377862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363457579462339249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a7b9c95cf5667c94c9efa41306057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8363457578987315898}
+  spawnOffset: 2
+  items:
+  - {fileID: 1916983328137310420, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+  minDelay: 1
+  maxDelay: 2
+  spawnAngle: 180
+  angleOffset: 90
+--- !u!114 &4284186053836123548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363457579462339249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a8ebb630f0a2c8fb5220f733b2b707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CurrentLevel>k__BackingField: 0
+  firstLevelXp: 10
+  OnXpChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: XpBarUI, Assembly-CSharp
+        m_MethodName: OnXpChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLevelUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8363457579741324840
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class XpBarUI : MonoBehaviour
         xpBarImage.fillAmount += step;
     }
 
-    public void OnXpChanged(PlayerLever.XpChangeEventArgs args) {
+    public void OnXpChanged(PlayerLevel.XpChangeEventArgs args) {
         targetFill = (float)args.CurrentXp / args.CurrentTarget;
         levelText.text = args.Level.ToString();
     }

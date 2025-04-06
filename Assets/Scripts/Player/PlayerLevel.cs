@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerLever : MonoBehaviour
+public class PlayerLevel : MonoBehaviour
 {
 
     [field:SerializeField]
@@ -18,8 +18,7 @@ public class PlayerLever : MonoBehaviour
     public UnityEvent<LevelUpEventArgs> OnLevelUp; 
 
     private void Awake() {
-        requiredXp = GetRequiedXpForLevel(CurrentLevel);
-        print(requiredXp);
+        requiredXp = GetRequiedXpForLevel(CurrentLevel + 1);
     }
 
     public void AddXp(int amount) {
