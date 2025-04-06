@@ -227,9 +227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e83ff80a6ca4d4ca1543244a8e0fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 8978130000771876275}
-  idle: {fileID: 8978129999147175552}
-  chase: {fileID: 8978129999679672828}
+  states:
+  - {fileID: 8978129999147175552}
+  - {fileID: 8978129999679672828}
+  - {fileID: 8978130000771876275}
 --- !u!1 &8978129999147175678
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517cdf221d6a4514081852c74e20815c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   lineOfsight: {fileID: 8978129999120511956}
   chaseState: {fileID: 8978129999679672828}
 --- !u!1 &8978129999679672826
@@ -321,7 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94958060fd6d692498faa588c3948fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   chaser: {fileID: 8978129999120511959}
   rotator: {fileID: 8978129999120511960}
   maxDistanceToPlayer: 50
@@ -420,7 +419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b49b4388c564a40b67fc27525ed812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   rotator: {fileID: 8978129999120511960}
   chaser: {fileID: 8978129999120511959}
   maxDistanceToPlayer: 20

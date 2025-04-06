@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleState : State
+public class IdleState : EnemyState
 {
-    [SerializeField]
-    public GameObject player;
-
     [SerializeField]
     public LineOfSight lineOfsight;
 

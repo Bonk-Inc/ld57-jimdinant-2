@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SetPlayer : MonoBehaviour
 {
-    public AttackState attack;
-    public IdleState idle;
-    public ChaseState chase;
+    [SerializeField]
+    public EnemyState[] states;
 
-    void Start()
+    private void Awake()
     {
         GameObject player = (FindObjectOfType(typeof(WormMovement)) as WormMovement).gameObject;
-        attack.player = player;
-        idle.player = player;
-        chase.player = player;
+
+        foreach (var state in states)
+        {
+            state.Player = player;
+        }
     }
 }

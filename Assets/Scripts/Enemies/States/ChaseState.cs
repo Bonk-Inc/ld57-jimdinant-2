@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseState : State
+public class ChaseState : EnemyState
 {
-
-    [SerializeField]
-    public GameObject player;
 
     [SerializeField]
     private ObjectChaser chaser;

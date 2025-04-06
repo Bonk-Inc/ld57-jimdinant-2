@@ -2,11 +2,8 @@ using System.Collections;
 using UnityEngine;
 using Bonk.StandardLibrary;
 
-public class AttackState : State
+public class AttackState : EnemyState
 {
-    [SerializeField]
-    public GameObject player;
-
     [SerializeField]
     private TargetRotator rotator;
 
