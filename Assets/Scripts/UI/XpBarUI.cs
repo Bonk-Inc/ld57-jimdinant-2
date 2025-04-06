@@ -14,9 +14,16 @@ public class XpBarUI : MonoBehaviour
     [SerializeField]
     private float lerpSpeed = 0.2f;
 
+    [SerializeField]
+    private GameObject levelUpText;
+
     private float targetFill = 0;
 
     private void Update() {
+
+        if(Input.GetKeyDown(KeyCode.F))
+            levelUpText.SetActive(false);
+
         if(Mathf.Approximately(xpBarImage.fillAmount, targetFill)){
             xpBarImage.fillAmount = targetFill;
             return;
@@ -34,6 +41,10 @@ public class XpBarUI : MonoBehaviour
     public void OnXpChanged(PlayerLevel.XpChangeEventArgs args) {
         targetFill = (float)args.CurrentXp / args.CurrentTarget;
         levelText.text = args.Level.ToString();
+    }
+
+    public void OnLevelUp() {
+        levelUpText.SetActive(true);
     }
 
 }
