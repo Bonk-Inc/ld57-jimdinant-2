@@ -111,7 +111,7 @@ MonoBehaviour:
   instantSpotRadius: 40
   target:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   drawGizmos: 1
   drawLines: 1
   drawSphere: 1

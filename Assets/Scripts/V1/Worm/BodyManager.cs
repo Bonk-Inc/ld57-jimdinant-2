@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bonk.StandardLibrary;
 using UnityEngine;
 
 public class BodyManager : MonoBehaviour
@@ -21,6 +22,9 @@ public class BodyManager : MonoBehaviour
     private BodyMovement tail;
     [SerializeField]
     private List<BodyMovement> middleParts = new List<BodyMovement>();
+    
+    [SerializeField]
+    private Health health;
 
     private bool isCheckingParts = false;
 
@@ -28,18 +32,24 @@ public class BodyManager : MonoBehaviour
 
     public List<BodyMovement> MiddleParts => middleParts;
 
-    public void CheckParts(float health)
+    private void Start()
+    {
+        // Get fucked Jimdinant
+        health.Damage(1);
+    }
+
+    public void CheckParts(Health.OnHealthChangedEventArgs health)
     {
         if (isCheckingParts) return;
         
-        IEnumerator coroutine = PartsCheck(health);
+        IEnumerator coroutine = PartsCheck(health.NewHealth);
         StartCoroutine(coroutine);       
     }
 
-    private IEnumerator PartsCheck(float health)
+    private IEnumerator PartsCheck(int health)
     {
        isCheckingParts = true;
-       int chunks = (int)health / healthChunk;
+       int chunks = health / healthChunk;
        int neededParts = chunks - middleParts.Count;
 
         while(neededParts != 0)
@@ -57,7 +67,7 @@ public class BodyManager : MonoBehaviour
                 yield return new WaitForSeconds(0.35f);
             }
 
-            chunks = (int)health / healthChunk;
+            chunks = health / healthChunk;
             neededParts = chunks - middleParts.Count;
             yield return neededParts == 0 ? null : new WaitForSeconds(waitTime);
         }

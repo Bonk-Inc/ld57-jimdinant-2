@@ -17,9 +17,10 @@ public class ScreenResizePoller : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void Awake()
+    private void Start()
     {
         ResetScreenSize();
+        onScreenResize?.Invoke();
     }
 
     void Update()

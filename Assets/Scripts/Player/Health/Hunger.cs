@@ -30,10 +30,12 @@ public class Hunger : MonoBehaviour
     {
         if (safetyOn)
             return;
+        
         float damage = hungerRate * hungerMult;
 
         //todo: multiply damage on higher dept 
         health.Damage(Mathf.RoundToInt(damage * Time.deltaTime));
+        
         //todo: hunger reduction
     }
 

@@ -44,7 +44,8 @@ public class OrthographicBackgroundScroller : MonoBehaviour
             {
                 MoveHighestColumnToLowest();
             }
-            else if (camBounds.max.y > backgroundBounds.max.y)
+            
+            if (camBounds.max.y > backgroundBounds.max.y)
             {
                 MoveLowestRowToHighest();
             } 
@@ -52,10 +53,7 @@ public class OrthographicBackgroundScroller : MonoBehaviour
             {
                 MoveHighestRowToLowest();
             }
-            else
-            {
-                break;
-            }
+            break;
         }
     }
 
