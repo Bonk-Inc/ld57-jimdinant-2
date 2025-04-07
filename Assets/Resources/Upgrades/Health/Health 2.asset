@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1228a549e14b9642a030de0f1fab46a, type: 3}
+  m_Name: Health 2
+  m_EditorClassIdentifier: 
+  UpgradeTitle: Max Health II
+  UpgradeValueDescription: Up max health by {0}
+  type: 3
+  requiresStat: {fileID: 11400000, guid: 77ac194c2bc08534ba1c81dad09b3011, type: 2}
+  minLevel: 5
+  cost: 2
+  statValue: 30
+  unlocked: 0
+  infinite: 0
+  note: Max health - 100

@@ -10,17 +10,21 @@ public class SkillOptionUI : MonoBehaviour
     private Image iconUI;
 
     [SerializeField]
-    private TextMeshProUGUI textUI;
+    private TextMeshProUGUI titleText, descriptionText;
 
-    public event Action OnSelected;
+    public event Action<UpgradeStat> OnSelected;
+    
+    private UpgradeStat upgrade;
 
-    public void SetContent(Sprite skillIcon, string skillName) {
-        iconUI.sprite = skillIcon;
-        textUI.SetText(skillName);
+    public void SetContent(UpgradeStat upgradeStat) {
+        titleText.SetText(upgradeStat.UpgradeTitle);
+        descriptionText.SetText(String.Format(upgradeStat.UpgradeValueDescription, upgradeStat.statValue));
+        
+        upgrade = upgradeStat;
     }
 
     public void Select()
     {
-        OnSelected?.Invoke();
+        OnSelected?.Invoke(upgrade);
     }
 }

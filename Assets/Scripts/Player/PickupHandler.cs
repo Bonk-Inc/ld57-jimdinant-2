@@ -6,6 +6,7 @@ public class PickupHandler : MonoBehaviour
 {
 
     private const string PICKUP_TAG = "Pickup";
+    private const int HealthRatio = 1000;
 
     [SerializeField]
     private PlayerLevel levelSystem;
@@ -13,6 +14,13 @@ public class PickupHandler : MonoBehaviour
     [SerializeField]
     private Health healthSystem;
 
+    [SerializeField] private float healthRegenRatio = 1;
+
+    public void SetHealthRegen(float ratio)
+    {
+        healthRegenRatio = ratio;
+    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(!collision.CompareTag(PICKUP_TAG))
@@ -29,7 +37,7 @@ public class PickupHandler : MonoBehaviour
         switch (pickup.Type)
         {
             case Pickup.PickupType.Health:
-                healthSystem.Heal(pickup.Amount);
+                healthSystem.Heal(Mathf.RoundToInt(pickup.Amount * healthRegenRatio * HealthRatio));
                 break;
             
             case Pickup.PickupType.Xp:

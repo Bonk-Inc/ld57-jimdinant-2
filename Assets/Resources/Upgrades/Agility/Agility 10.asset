@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1228a549e14b9642a030de0f1fab46a, type: 3}
+  m_Name: Agility 10
+  m_EditorClassIdentifier: 
+  UpgradeTitle: Agility boost X
+  UpgradeValueDescription: Jimdinant gains {0} agility
+  type: 1
+  requiresStat: {fileID: 11400000, guid: 9fe8174c9226b7b4c82960639b9ebe99, type: 2}
+  minLevel: 25
+  cost: 5
+  statValue: 40
+  unlocked: 0
+  infinite: 0
+  note: Agility - 300

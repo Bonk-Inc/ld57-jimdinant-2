@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Worm Skin", menuName = "worm/skin")]
+[CreateAssetMenu(fileName = "Worm Skin", menuName = "Worm/Skin")]
 public class Skin : ScriptableObject
 {
     [SerializeField]

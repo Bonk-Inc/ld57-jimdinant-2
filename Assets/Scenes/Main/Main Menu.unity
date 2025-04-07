@@ -20323,7 +20323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314303890751514064, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1530
+      value: 2250
       objectReference: {fileID: 0}
     - target: {fileID: 7390752017116403406, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20809,7 +20809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051561994335, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278269815
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051852749812, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21903,7 +21903,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 738791291574427535, guid: cd8318bc383de46489bcd648a5b402bd, type: 3}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2085766152990116197, guid: cd8318bc383de46489bcd648a5b402bd, type: 3}
       propertyPath: m_Pivot.x
