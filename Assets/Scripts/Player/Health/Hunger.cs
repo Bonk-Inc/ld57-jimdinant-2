@@ -5,6 +5,9 @@ public class Hunger : MonoBehaviour
 {
     [SerializeField]
     private float hungerRate = 1;
+    
+    [SerializeField]
+    private float depthRate = 1;
 
     [SerializeField]
     private float safetyTime = 5;
@@ -19,6 +22,12 @@ public class Hunger : MonoBehaviour
         get { return hungerRate; }
         set { hungerRate = value; }
     }
+    
+    public float DepthRate
+    {
+        get { return depthRate; }
+        set { depthRate = value; }
+    }
 
     private void Start()
     {
@@ -31,12 +40,8 @@ public class Hunger : MonoBehaviour
         if (safetyOn)
             return;
         
-        float damage = hungerRate * hungerMult;
-
-        //todo: multiply damage on higher dept 
+        float damage = hungerRate * hungerMult * depthRate;
         health.Damage(Mathf.RoundToInt(damage * Time.deltaTime));
-        
-        //todo: hunger reduction
     }
 
     private void SafetyTime()

@@ -7,6 +7,6 @@ public class HungerRateUpgradeExecutor : UpgradeExecutor
 
     public override void Execute(UpgradeStat stat)
     {
-        hunger.HungerRate = stat.statValue;
+        hunger.HungerRate *= 1 - stat.statValue / 100;
     }
 }
