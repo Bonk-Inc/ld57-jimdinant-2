@@ -371,7 +371,7 @@
         "com.unity.textmeshpro": "4.0.0-pre12",
         "group.bonk.standard-library": "git@github.com:Bonk-Inc/group.bonk.standard-library.git#v1.0.3"
       },
-      "hash": "c22dab4bf9c9097acb45a0b68d62f00e08732c8d"
+      "hash": "5ca618489738bee9fcfdd805f4c990c6fb973e9b"
     },
     "group.bonk.standard-library": {
       "version": "git@github.com:Bonk-Inc/group.bonk.standard-library.git#v1.0.3",
