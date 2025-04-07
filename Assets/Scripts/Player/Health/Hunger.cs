@@ -1,4 +1,5 @@
 using Bonk.StandardLibrary;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Hunger : MonoBehaviour
@@ -12,6 +13,7 @@ public class Hunger : MonoBehaviour
     [SerializeField]
     private float safetyTime = 5;
 
+    [ShowInInspector]
     private float hungerMult = 1;
     private Health health;
 

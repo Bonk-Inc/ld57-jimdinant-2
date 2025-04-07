@@ -14,32 +14,39 @@ public class UpgradeManager : MonoBehaviour
     {
         get { return instance; }
     }
-
-    public UnityEvent<UpgradeStat> OnUpgrade;
-
+    
+    private List<UpgradeStatData> upgradesData = new();
+    
     private void Awake()
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
+
+        foreach (var upgrade in upgrades)
+        {
+            upgradesData.Add(new UpgradeStatData { UpgradeInfo = upgrade, Unlocked = false });
+        }
     }
     
-    public List<UpgradeStat> GetUpgrades
+    public List<UpgradeStatData> GetUpgrades
     {
-        get { return upgrades; }
+        get { return upgradesData; }
     }
     
     public List<UpgradeStat> GetPossibleUpgrades (int level)
     {
         var possibleUpgrades = new List<UpgradeStat>();
-        foreach (UpgradeStat upgrade in upgrades)
+        foreach (UpgradeStatData upgrade in upgradesData)
         {
-            if (IsUnlocked(upgrade) && !upgrade.infinite) continue;
+            var upgradeInfo = upgrade.UpgradeInfo;
+            print(upgradeInfo);
+            if (IsUnlocked(upgrade.UpgradeInfo) && !upgrade.UpgradeInfo.infinite) continue;
             
-            if (upgrade.minLevel > level) continue;
+            if (upgradeInfo.minLevel > level) continue;
             
-            if (upgrade.requiresStat != null && IsUnlocked(upgrade.requiresStat)) continue; 
+            if (upgradeInfo.requiresStat is not null && IsUnlocked(upgradeInfo)) continue; 
             
-            possibleUpgrades.Add(upgrade);
+            possibleUpgrades.Add(upgrade.UpgradeInfo);
         }
         
         return possibleUpgrades;
@@ -47,10 +54,21 @@ public class UpgradeManager : MonoBehaviour
     
     public bool IsUnlocked (UpgradeStat stat)
     {
-        var upgrade = upgrades.Find(upgradeStat => upgradeStat.name == stat.name);
+        var upgrade = FindUpgradeByName(stat);
         
         if (upgrade == null) return false;
-        return upgrade.unlocked;
+        return upgrade.Unlocked;
+    }
+
+    public void UpgradeSelected(UpgradeStat stat)
+    {
+        var upgrade = FindUpgradeByName(stat);
+        upgrade.Unlocked = true;
+    }
+    
+    public UpgradeStatData FindUpgradeByName (UpgradeStat stat)
+    {
+        return upgradesData.Find(upgradeStat => upgradeStat.UpgradeInfo.name == stat.name);
     }
     
     /*
@@ -64,9 +82,9 @@ public class UpgradeManager : MonoBehaviour
         float totalUpgrades = upgrades.Count;
         float unlockedUpgrades = 0;
 
-        foreach (UpgradeStat upgrade in upgrades)
+        foreach (UpgradeStatData upgrade in upgradesData)
         {
-            if (upgrade.unlocked) unlockedUpgrades++;
+            if (upgrade.Unlocked) unlockedUpgrades++;
         }
 
         if (unlockedUpgrades == 0) return 0;

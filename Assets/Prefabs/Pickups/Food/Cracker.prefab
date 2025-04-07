@@ -8,17 +8,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1916983328137310420, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+      propertyPath: maxDistanceToPlayer
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916983328137310420, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+      propertyPath: <Weight>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916983328137310420, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+      propertyPath: <MaxDepth>k__BackingField
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916983328137310420, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+      propertyPath: <MinDepth>k__BackingField
+      value: -4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137259301172578505, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0fd5e45b4634994aacd861594ec3da6, type: 3}
     - target: {fileID: 2137259301172578505, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
       propertyPath: m_Color.b
-      value: 0.30838373
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2137259301172578505, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
       propertyPath: m_Color.g
-      value: 0.8490566
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2137259301172578505, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
       propertyPath: m_Color.r
-      value: 0.36013377
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4778292563576796963, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8388415476027680934, guid: e11e16b1b55ef076e95bd9af8d4f5dea, type: 3}
       propertyPath: m_Name
-      value: Example Health Pickup
+      value: Cracker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

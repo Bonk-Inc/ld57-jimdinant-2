@@ -12,7 +12,7 @@ public class TileSpriteChange : MonoBehaviour
     private Sprite grass, dirt, gradientDirt, darkDirt;
 
     [SerializeField]
-    private float darkDirtDepth = -100, surfaceDepth = 0;
+    private float darkDirtDepth = -100, surfaceDepth = 7000;
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class TileSpriteChange : MonoBehaviour
             spriteRenderer.sprite = grass;
             
             flipXChance = 1;
-            flipYChance = 1;
+            flipYChance = 10;
         } else if (y < darkDirtDepth)
         {
             spriteRenderer.sprite = y < darkDirtDepth - tile.GetSize().y ? darkDirt : gradientDirt;
