@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 8978129999120511960}
   - component: {fileID: 7799495172363667763}
   - component: {fileID: 5846230088836366809}
-  m_Layer: 6
+  - component: {fileID: 9016667820256661224}
+  m_Layer: 7
   m_Name: Leech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,6 +255,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9016667820256661224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978129999120511953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8545a3a00c620b71bb714c07b1b64fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MinDepth>k__BackingField: -100000
+  <MaxDepth>k__BackingField: 100000
+  <Weight>k__BackingField: 2
+  maxDistanceToPlayer: 500
+  despawnOutOfRange: 1
 --- !u!1 &8978129999147175678
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaser: {fileID: 8978129999120511959}
   rotator: {fileID: 8978129999120511960}
-  maxDistanceToPlayer: 50
+  maxDistanceToPlayer: 100
   minDistanceToPlayer: 20
   idleState: {fileID: 8978129999147175552}
   attackState: {fileID: 8978130000771876275}
@@ -447,6 +465,6 @@ MonoBehaviour:
   maxDistanceToPlayer: 20
   minDistanceToPlayer: 2
   chaseState: {fileID: 8978129999679672828}
-  damage: 60
-  attackDelay: 7
+  damage: 35
+  attackDelay: 6
   waitTime: 1

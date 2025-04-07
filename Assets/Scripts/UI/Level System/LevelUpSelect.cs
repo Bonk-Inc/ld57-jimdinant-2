@@ -48,7 +48,6 @@ public class LevelUpSelect : MonoBehaviour
     private void ShowSkills()
     {
         var upgrades = upgradeManager.GetPossibleUpgrades(playerLevel.CurrentLevel);
-        print(upgrades);
         var upgradesToShow = new List<UpgradeStat>();
 
         foreach (var skillOptionUI in skillOptionUIs)

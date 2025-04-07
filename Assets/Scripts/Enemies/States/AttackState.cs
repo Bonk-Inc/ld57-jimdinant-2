@@ -67,10 +67,11 @@ public class AttackState : EnemyState
 
     private IEnumerator Attackroutine()
     {
+        var healthMargin = 100;
         while (true)
         {
             yield return new WaitForSeconds(waitTime);
-            playerHealth.Damage(damage);
+            playerHealth.Damage(damage * healthMargin);
             yield return new WaitForSeconds(attackDelay);
         }
     }

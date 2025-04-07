@@ -16,9 +16,6 @@ public class UsernameCanvas : MonoBehaviour
     private Button registerButton;
     
     [SerializeField]
-    private SceneLoader sceneLoader;
-    
-    [SerializeField]
     private Canvas canvas;
 
     private BabsDao _babsDao;
@@ -42,7 +39,7 @@ public class UsernameCanvas : MonoBehaviour
     private void HandleUserRegistered(User _)
     {
         canvas.enabled = false;
-        sceneLoader.LoadScene("Play");
+        SceneLoader.Instance.LoadScene("Play");
     }
 
     private void CheckUserRegistered()

@@ -39,7 +39,6 @@ public class UpgradeManager : MonoBehaviour
         foreach (UpgradeStatData upgrade in upgradesData)
         {
             var upgradeInfo = upgrade.UpgradeInfo;
-            print(upgradeInfo);
             if (IsUnlocked(upgrade.UpgradeInfo) && !upgrade.UpgradeInfo.infinite) continue;
             
             if (upgradeInfo.minLevel > level) continue;

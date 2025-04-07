@@ -26,6 +26,12 @@ public class SpawnItem : MonoBehaviour
         if(!despawnOutOfRange)
             return;
 
+        if (player is null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         var distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if(distanceToPlayer > maxDistanceToPlayer)
             Destroy(gameObject);
