@@ -6,7 +6,7 @@ public class PickupHandler : MonoBehaviour
 {
 
     private const string PICKUP_TAG = "Pickup";
-    private const int HealthRatio = 1000;
+    private const int HealthRatio = 100;
 
     [SerializeField]
     private PlayerLevel levelSystem;

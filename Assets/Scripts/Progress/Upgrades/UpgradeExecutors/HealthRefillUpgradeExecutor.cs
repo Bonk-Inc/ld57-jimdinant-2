@@ -6,7 +6,7 @@ public class HealthRefillUpgradeExecutor : UpgradeExecutor
     [SerializeField]
     private Health health;
 
-    private const int HealthRatio = 1000;
+    private const int HealthRatio = 100;
 
     public override void Execute(UpgradeStat stat)
     {
