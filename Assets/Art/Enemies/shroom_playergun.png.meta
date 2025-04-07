@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shroom_playergun_0: 6959888860410305559
+      shroom_playergun_1: 8644076336670892221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
