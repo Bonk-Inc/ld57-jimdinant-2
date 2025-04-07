@@ -20323,7 +20323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314303890751514064, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2250
+      value: 2610
       objectReference: {fileID: 0}
     - target: {fileID: 7390752017116403406, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21017,7 +21017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834530052482333602, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_Color.a
-      value: 0.019607844
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4834530052482333602, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_Enabled
