@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,9 +19,16 @@ public class MainMusicController : MonoBehaviour
     private AudioSource mainAudioSource, oldAudioSource;
     private UpgradeManager manager;
 
+    private int currentNumber = 0;
+
     private void Start()
     {
         manager = UpgradeManager.Instance;
+        CheckProgress(true);
+    }
+
+    public void CheckProgress(bool forcePlay = false)
+    {
         float fractionUnlocked = manager.GetPercentageUnlocked();
 
         for (int i = 0; i < clipInfos.Count; i++)
@@ -28,6 +36,8 @@ public class MainMusicController : MonoBehaviour
             if (fractionUnlocked < clipInfos[i].fraction)
                 continue;
 
+            if (i == currentNumber && !forcePlay) return;
+            
             IEnumerator switchSongsCoroutine = SwitchSongs(i);
             StartCoroutine(switchSongsCoroutine);
 
@@ -38,7 +48,7 @@ public class MainMusicController : MonoBehaviour
     // glitter
     private IEnumerator SwitchSongs(int songNumber)
     {
-        int oldNumber = PlayerPrefs.GetInt("ClipInfoNumber");
+        int oldNumber = currentNumber;
         
         if (oldNumber != 0 && oldNumber != songNumber)
         {
@@ -74,7 +84,7 @@ public class MainMusicController : MonoBehaviour
             mainAudioSource.Play();
         }
         
-        PlayerPrefs.SetInt("ClipInfoNumber", songNumber);
+        currentNumber = songNumber;
 
         //glitter
     }

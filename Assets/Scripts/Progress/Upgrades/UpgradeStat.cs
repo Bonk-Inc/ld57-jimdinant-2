@@ -14,8 +14,12 @@ public class UpgradeStat : ScriptableObject
     public int cost = 1;
     public float statValue;
     
-    public bool unlocked = false;
     public bool infinite = false;
 
     [SerializeField, Header("Meta data")] private string note;
+
+    public override String ToString()
+    {
+        return UpgradeTitle + ", infinite: " + infinite + ", statvalue: " + statValue + ", minLevel: " + minLevel + ", cost: " + cost;
+    }
 }

@@ -1,6 +1,4 @@
 using Sirenix.OdinInspector;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,7 +9,7 @@ public class UIControllerManager : MonoBehaviour
 
     private void Awake()
     {
-        if(firstSelected == null)
+        if (firstSelected == null)
         {
             firstSelected = EventSystem.current.currentSelectedGameObject;
         }

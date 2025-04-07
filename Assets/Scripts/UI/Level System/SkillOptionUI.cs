@@ -22,6 +22,13 @@ public class SkillOptionUI : MonoBehaviour
         
         upgrade = upgradeStat;
     }
+    
+    public void SetEmpty() {
+        titleText.SetText("No available upgrade");
+        descriptionText.SetText("");
+        
+        upgrade = null;
+    }
 
     public void Select()
     {
