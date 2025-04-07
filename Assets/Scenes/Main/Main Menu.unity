@@ -20069,6 +20069,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2250168724267381629, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2679101334114672279, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_ChildAlignment
       value: 1
@@ -20323,7 +20327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314303890751514064, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4860
+      value: 5490
       objectReference: {fileID: 0}
     - target: {fileID: 7390752017116403406, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20851,6 +20855,10 @@ PrefabInstance:
     - target: {fileID: 4834530051332871324, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_SizeDelta.y
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834530051561994334, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
+      propertyPath: 'facts.Array.data[8]'
+      value: This game is a sequel to our LD48 entry Jimdinant to the Core!
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051561994335, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_fontColor32.rgba
