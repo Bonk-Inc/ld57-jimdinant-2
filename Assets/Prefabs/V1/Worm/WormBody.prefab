@@ -278,14 +278,16 @@ MonoBehaviour:
   upgradeExecutors:
   - upgradeType: 0
     executor: {fileID: 6742197804991435050}
+  - upgradeType: 3
+    executor: {fileID: 4891874151324901742}
+  - upgradeType: 5
+    executor: {fileID: 4992570198098370714}
+  - upgradeType: 4
+    executor: {fileID: 3134002602125397387}
   - upgradeType: 1
     executor: {fileID: 216161799764841373}
   - upgradeType: 2
     executor: {fileID: 4875968628220956837}
-  - upgradeType: 3
-    executor: {fileID: 4891874151324901742}
-  - upgradeType: 4
-    executor: {fileID: 0}
 --- !u!1 &8363457577991229973
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hungerRate: 50
+  depthRate: 1
   safetyTime: 5
 --- !u!114 &675940141942036159
 MonoBehaviour:
