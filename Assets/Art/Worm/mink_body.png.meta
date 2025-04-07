@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mink_body_0: 6852757117390887111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
