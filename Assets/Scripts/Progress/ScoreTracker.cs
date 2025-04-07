@@ -8,6 +8,7 @@ public class ScoreTracker : MonoBehaviour
  
     private int startingDepth = 0;
     private int currentScore = 0;
+    private int extraDepthScore = 0;
     
     private bool reachedGameOver = false;
     public int CurrentScore => currentScore;
@@ -18,6 +19,11 @@ public class ScoreTracker : MonoBehaviour
     public static ScoreTracker Instance
     {
         get { return instance; }
+    }
+
+    public void AddDepthScore()
+    {
+        extraDepthScore += currentScore;
     }
     
     private void Awake()
@@ -51,7 +57,7 @@ public class ScoreTracker : MonoBehaviour
             reachedGameOver = false;
         }
         
-        var newScore = -Mathf.CeilToInt(player.transform.position.y - startingDepth);
+        var newScore = -Mathf.CeilToInt(player.transform.position.y - startingDepth) + extraDepthScore;
 
         if (newScore > currentScore)
         {
