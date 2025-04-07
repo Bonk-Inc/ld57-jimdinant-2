@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7091545475617030669}
   - component: {fileID: 6454002228706976032}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Distance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,6 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7030726194195669206}
   - component: {fileID: 3781192134792327210}
+  - component: {fileID: 159931425484409166}
   m_Layer: 5
   m_Name: Leaderboard Item
   m_TagString: Untagged
@@ -222,6 +223,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &159931425484409166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4898280332629030111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb225d4f0687496f9862d990f4ab5ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionDisplay: {fileID: 661637126502150712}
+  nameDisplay: {fileID: 7862359553951944982}
+  scoreDisplay: {fileID: 7091545475617030669}
 --- !u!1 &5038240928527103538
 GameObject:
   m_ObjectHideFlags: 0

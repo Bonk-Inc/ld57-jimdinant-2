@@ -363,6 +363,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "group.bonk.bonk-inc-backend": {
+      "version": "git@github.com:Bonk-Inc/group.bonk.bonk-inc-backend.git#v0.1.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "4.0.0-pre12",
+        "group.bonk.standard-library": "git@github.com:Bonk-Inc/group.bonk.standard-library.git#v1.0.3"
+      },
+      "hash": "e5f5bcd1f780a774b90e87b858d67646d016de96"
+    },
     "group.bonk.standard-library": {
       "version": "git@github.com:Bonk-Inc/group.bonk.standard-library.git#v1.0.3",
       "depth": 0,
