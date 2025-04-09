@@ -21,6 +21,11 @@ public class LevelUpManager : MonoBehaviour
         if(!Input.GetKeyDown(KeyCode.F) && !Input.GetKeyDown(KeyCode.Joystick1Button3))
             return;
 
+        LevelUpClicked();
+    }
+
+    public void LevelUpClicked()
+    {
         levelUpSelector.Enable(currentLevel - lastLevelHandled);
         lastLevelHandled = currentLevel;
     }
