@@ -20327,7 +20327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314303890751514064, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6030
+      value: 6947
       objectReference: {fileID: 0}
     - target: {fileID: 7390752017116403406, guid: d8586cb89b075b670bc8728a5cd6c71d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -20778,7 +20778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -20791,7 +20791,7 @@ PrefabInstance:
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 445366830}
+      objectReference: {fileID: 1426592748}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -20806,7 +20806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadSceneDirect
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -20818,7 +20818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Bonk.StandardLibrary.GameFlow.SceneLoading.UISceneLoader, Bonk.StandardLibrary
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4834530051243401353, guid: 6a9f29ce388ef234a933b5be8bce6273, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -22110,6 +22110,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 2173103449903027394, guid: 1a1e0ba8f6e0c2b4d8d34528f844a037, type: 3}
+      propertyPath: gameId
+      value: 70a9e25e-be32-4bee-b11a-111d0b855765
+      objectReference: {fileID: 0}
     - target: {fileID: 2226620971984817252, guid: 1a1e0ba8f6e0c2b4d8d34528f844a037, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22249,6 +22253,10 @@ PrefabInstance:
     - target: {fileID: 7140471636554487604, guid: 1a1e0ba8f6e0c2b4d8d34528f844a037, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560229231888006227, guid: 1a1e0ba8f6e0c2b4d8d34528f844a037, type: 3}
+      propertyPath: gameId
+      value: 70a9e25e-be32-4bee-b11a-111d0b855765
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4556766412858892937, guid: 1a1e0ba8f6e0c2b4d8d34528f844a037, type: 3}

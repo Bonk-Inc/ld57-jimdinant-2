@@ -1569,11 +1569,11 @@ PrefabInstance:
       objectReference: {fileID: 898378782}
     - target: {fileID: 1914243950998985885, guid: 86d436e4ca3689b3f82b142877000cc8, type: 3}
       propertyPath: Composition.DeadZone.Size.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1914243950998985885, guid: 86d436e4ca3689b3f82b142877000cc8, type: 3}
       propertyPath: Composition.DeadZone.Size.y
-      value: 0.35
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2191873063706900327, guid: 86d436e4ca3689b3f82b142877000cc8, type: 3}
       propertyPath: m_Name

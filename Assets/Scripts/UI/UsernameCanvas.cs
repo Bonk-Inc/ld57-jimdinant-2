@@ -9,6 +9,9 @@ using UnityEngine.UI;
 
 public class UsernameCanvas : MonoBehaviour
 {
+
+    [SerializeField] private string gameId;
+    
     [SerializeField]
     private RegisterUser register;
     
@@ -22,8 +25,15 @@ public class UsernameCanvas : MonoBehaviour
     
     private void Awake()
     {
-        var settings = BonkIncBackendSettings.Load();
-        _babsDao = new BabsDao(settings);
+        if (string.IsNullOrEmpty(gameId))
+        {
+            var settings = BonkIncBackendSettings.Load();
+            _babsDao = new BabsDao(settings);
+        }
+        else
+        {
+            _babsDao = new BabsDao(gameId);
+        }
             
         register.OnUserRegistered += HandleUserRegistered; 
     }

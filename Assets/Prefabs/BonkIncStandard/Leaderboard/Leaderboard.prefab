@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89371970475646b4b2a5bad44a606c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameId: 70a9e25e-be32-4bee-b11a-111d0b855765
   personalScore: {fileID: 0}
   scoreDisplayPrefab: {fileID: 159931425484409166, guid: 9173a1f17ec041f208e8b28aa3a63873, type: 3}
   scoreboard: {fileID: 7314303890751514064}
